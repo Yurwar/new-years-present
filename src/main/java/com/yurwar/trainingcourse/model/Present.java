@@ -7,8 +7,8 @@ import java.util.Comparator;
 import java.util.List;
 
 public class Present {
-    public static Comparator<Sweets> SUGAR_CONTENT_CONDITION = (a, b) -> (int) (a.getSugarContent() - b.getSugarContent());
-    public static Comparator<Sweets> WEIGHT_CONDITION = (a, b) -> (int) (a.getWeight() - b.getWeight());
+    public static Comparator<Sweets> SUGAR_CONTENT_CONDITION = Comparator.comparingDouble(Sweets::getSugarContent);
+    public static Comparator<Sweets> WEIGHT_CONDITION = Comparator.comparingDouble(Sweets::getWeight);
 
     private List<Sweets> sweets = new ArrayList<>();
 
