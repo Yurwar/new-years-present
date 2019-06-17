@@ -20,6 +20,18 @@ public class Present {
         sweets.sort(comparator);
     }
 
+    public List<Sweets> getSweetsFromSugarContentRange(double lowerBorder, double upperBorder) {
+        List<Sweets> sweetsInRange = new ArrayList<>();
+
+        for (Sweets sweet : sweets) {
+            if (sweet.getSugarContent() >= lowerBorder && sweet.getSugarContent() <= upperBorder) {
+                sweetsInRange.add(sweet);
+            }
+        }
+
+        return sweetsInRange;
+    }
+
     public List<Sweets> getSweets() {
         return sweets;
     }
