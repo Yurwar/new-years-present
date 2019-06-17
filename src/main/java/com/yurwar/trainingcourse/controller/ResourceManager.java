@@ -1,0 +1,35 @@
+package com.yurwar.trainingcourse.controller;
+
+import java.util.Enumeration;
+import java.util.Locale;
+import java.util.ResourceBundle;
+
+/**
+ * Manages resources depending on program locale
+ * @author Yurii Matora
+ */
+public enum ResourceManager {
+    USER_INTERFACE("resources.userInterface");
+
+    private ResourceBundle resourceBundle;
+    private String resourceName;
+
+    ResourceManager(String resourceName) {
+        this.resourceName = resourceName;
+        resourceBundle = ResourceBundle.getBundle(this.resourceName,
+                Locale.getDefault());
+    }
+
+    public void changeResource(Locale locale) {
+        resourceBundle = ResourceBundle.getBundle(resourceName,
+                locale);
+    }
+
+    public String getString(String key) {
+        return resourceBundle.getString(key);
+    }
+
+    public Enumeration<String> getSetKey() {
+        return resourceBundle.getKeys();
+    }
+}
