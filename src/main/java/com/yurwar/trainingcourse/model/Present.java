@@ -16,6 +16,8 @@ public class Present {
         this.sweets = sweets;
     }
 
+    public Present() {}
+
     public void sortByCriterion(Comparator<Sweets> comparator) {
         sweets.sort(comparator);
     }
