@@ -9,7 +9,7 @@ import java.util.ResourceBundle;
  * @author Yurii Matora
  */
 public enum ResourceManager {
-    USER_INTERFACE("resources.userInterface");
+    USER_INTERFACE("userInterface");
 
     private ResourceBundle resourceBundle;
     private String resourceName;
