@@ -1,5 +1,7 @@
 package com.yurwar.trainingcourse.model.entity;
 
+import java.util.Objects;
+
 public abstract class Sweets {
     private String name;
     private double weight;
@@ -11,6 +13,28 @@ public abstract class Sweets {
         this.name = name;
         this.weight = weight;
         this.sugarContent = sugarContent;
+    }
+
+    @Override
+    public String toString() {
+        return "Name: " + name + "\n" +
+                "Weight: " + weight + "\n" +
+                "Sugar content: " + sugarContent + "\n";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Sweets)) return false;
+        Sweets sweets = (Sweets) o;
+        return Double.compare(sweets.weight, weight) == 0 &&
+                Double.compare(sweets.sugarContent, sugarContent) == 0 &&
+                name.equals(sweets.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, weight, sugarContent);
     }
 
     public double getWeight() {
