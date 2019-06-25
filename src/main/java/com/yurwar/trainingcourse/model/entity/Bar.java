@@ -2,6 +2,9 @@ package com.yurwar.trainingcourse.model.entity;
 
 import java.util.Objects;
 
+/**
+ * Bar entity class
+ */
 public class Bar extends Sweets {
     public BarProperty barProperty;
 

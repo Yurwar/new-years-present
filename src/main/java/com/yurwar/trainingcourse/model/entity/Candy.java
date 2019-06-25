@@ -2,6 +2,9 @@ package com.yurwar.trainingcourse.model.entity;
 
 import java.util.Objects;
 
+/**
+ * Candy entity class
+ */
 public class Candy extends Sweets {
     private CandyProperty candyProperty;
 

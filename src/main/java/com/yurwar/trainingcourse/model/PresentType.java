@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Enumerate possible types of presents
+ */
 public enum PresentType {
     GREAT(new Candy("Herbina", 0.04, 3.0, CandyProperty.NORMAL),
             new Candy("Iris", 0.04, 2.0, CandyProperty.GLUTEN_FREE),

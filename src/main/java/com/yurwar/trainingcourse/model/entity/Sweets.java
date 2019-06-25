@@ -2,6 +2,10 @@ package com.yurwar.trainingcourse.model.entity;
 
 import java.util.Objects;
 
+/**
+ * Abstract class that contains fields
+ * which describes sweet entity
+ */
 public abstract class Sweets {
     private String name;
     private double weight;
