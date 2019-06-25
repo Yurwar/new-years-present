@@ -19,13 +19,11 @@ public class View {
 
     public void printSweets(List<Sweets> sweets) {
         sweets.forEach(System.out::println);
-
-        double totalWeight = 0;
-        for (Sweets sweet : sweets) {
-            totalWeight += sweet.getWeight();
-        }
+        double totalWeight = sweets
+                .stream()
+                .mapToDouble(Sweets::getWeight)
+                .sum();
         System.out.println("Total weight: " + totalWeight);
-
     }
 
 }

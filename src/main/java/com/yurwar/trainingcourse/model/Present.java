@@ -38,12 +38,9 @@ public class Present {
     public List<Sweets> getSweetsFromSugarContentRange(double lowerBorder, double upperBorder) {
         List<Sweets> sweetsInRange = new ArrayList<>();
 
-        for (Sweets sweet : sweets) {
-            if (sweet.getSugarContent() >= lowerBorder && sweet.getSugarContent() <= upperBorder) {
-                sweetsInRange.add(sweet);
-            }
-        }
-
+        sweets.stream()
+                .filter(sweet -> sweet.getSugarContent() >= lowerBorder && sweet.getSugarContent() <= upperBorder)
+                .forEach(sweetsInRange::add);
         return sweetsInRange;
     }
 
