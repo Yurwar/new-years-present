@@ -2,9 +2,16 @@ package com.yurwar.trainingcourse.controller;
 
 import java.util.Scanner;
 
+/**
+ * Provides method realisation to
+ * read user input from console
+ */
 public class ConsoleReader implements Reader {
     private Scanner sc;
 
+    /**
+     * Uses scanner and system input stream by default
+     */
     public ConsoleReader() {
         this.sc = new Scanner(System.in);
     }

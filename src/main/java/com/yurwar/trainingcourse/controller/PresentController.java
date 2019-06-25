@@ -6,6 +6,11 @@ import com.yurwar.trainingcourse.view.View;
 
 import java.util.Locale;
 
+/**
+ * Class that controls user inputs, put it in the model and
+ * control output results.
+ * @author Yurii Matora
+ */
 public class PresentController {
     private Present model;
     private View view;
@@ -19,6 +24,9 @@ public class PresentController {
         UIManager = ResourceManager.USER_INTERFACE;
     }
 
+    /**
+     * Main controller entry point
+     */
     public void processUser() {
         view.printMessage(UIManager.getString(View.MENU_GREETING));
         chooseLanguage();
@@ -71,6 +79,9 @@ public class PresentController {
         }
     }
 
+    /**
+     * Request user for choose language
+     */
     private void chooseLanguage() {
         boolean choosingLanguage = true;
         while (choosingLanguage){
@@ -94,6 +105,9 @@ public class PresentController {
         }
     }
 
+    /**
+     * Request user to choose present type
+     */
     private void choosePresentType() {
         boolean choosingType = true;
         while (choosingType) {
@@ -120,6 +134,9 @@ public class PresentController {
 
     }
 
+    /**
+     * @return handled int number from user
+     */
     private int getIntFromReader() {
         int result;
         while (true) {
@@ -133,6 +150,9 @@ public class PresentController {
         return result;
     }
 
+    /**
+     * @return handled double number from user
+     */
     private double getDoubleFromReader() {
         double result;
         while (true) {

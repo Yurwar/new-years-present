@@ -3,6 +3,9 @@ package com.yurwar.trainingcourse.model.entity;
 
 import java.util.Objects;
 
+/**
+ * Waffle entity class
+ */
 public class Waffle extends Sweets {
     private boolean crunchy;
 
