@@ -5,6 +5,7 @@ import com.yurwar.trainingcourse.model.entity.Sweets;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Model class that contains list of sweets objects
@@ -36,12 +37,9 @@ public class Present {
      * @return list of sweets that fits in range
      */
     public List<Sweets> getSweetsFromSugarContentRange(double lowerBorder, double upperBorder) {
-        List<Sweets> sweetsInRange = new ArrayList<>();
-
-        sweets.stream()
+        return sweets.stream()
                 .filter(sweet -> sweet.getSugarContent() >= lowerBorder && sweet.getSugarContent() <= upperBorder)
-                .forEach(sweetsInRange::add);
-        return sweetsInRange;
+                .collect(Collectors.toList());
     }
 
     public List<Sweets> getSweets() {
